@@ -25,7 +25,7 @@ class App extends Component {
           });
         
         return (
-            <div>
+            <div style={{marginLeft: "5rem"}}>
                 <AddForm addUser={this.handleAddUser} />
                 {users}
             </div>
