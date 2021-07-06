@@ -9,6 +9,15 @@ class AddForm extends Component {
             gen: ""
         }
     }
+
+    handleChange = (e) => {
+        const target = e.target;
+        const name = target.name;
+        const value = target.value;
+
+        this.setState({[name]: value})
+    }
+    
     render() {
         return (
             <div>
