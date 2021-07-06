@@ -1,50 +1,70 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class AddForm extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            name: "",
-            email: "",
-            gen: ""
-        }
-    }
-
-    handleChange = (e) => {
-        const target = e.target;
-        const name = target.name;
-        const value = target.value;
-
-        this.setState({[name]: value})
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      gen: "",
     };
+  }
 
-    handleSubmit = (e) => {
-        e.preventDefault();
-    }
+  handleChange = (e) => {
+    const target = e.target;
+    const name = target.name;
+    const value = target.value;
 
-    render() {
-        return (
-            <form onSubmit={this.handleSubmit}>
-                <div className="userForm">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" value={this.state.name} onChange={this.handleChange} />
-                </div>
-                <div className="userForm">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" value={this.state.email} onChange={this.handleChange} />
-                </div>
-                <div className="userForm">
-                    <label htmlFor="gen">Gen</label>
-                    <input type="number" value={this.state.number} onChange={this.handleChange} />
-                </div>
+    this.setState({ [name]: value });
+  };
 
-                <div className="submit">
-                    <button>Register</button>
-                </div>
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.addUser(this.state);
+    this.setState({
+      name: "",
+      email: "",
+      gen: "",
+    });
+  };
 
-            </form>
-        );
-    }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <div className="userForm">
+          <label htmlFor="name">Name</label>
+          <input
+            type="name"
+            name="name"
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="userForm">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+        </div>
+        <div className="userForm">
+          <label htmlFor="gen">Gen</label>
+          <input
+            type="number"
+            name="gen"
+            value={this.state.gen}
+            onChange={this.handleChange}
+          />
+        </div>
+
+        <div className="submit">
+          <button>Register</button>
+        </div>
+      </form>
+    );
+  }
 }
 
 export default AddForm;
