@@ -26,15 +26,15 @@ class AddForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className="userForm">
-                    <label htmlFor="name"></label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" value={this.state.name} onChange={this.handleChange} />
                 </div>
                 <div className="userForm">
-                    <label htmlFor="email"></label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" value={this.state.email} onChange={this.handleChange} />
                 </div>
                 <div className="userForm">
-                    <label htmlFor="gen"></label>
+                    <label htmlFor="gen">Gen</label>
                     <input type="number" value={this.state.number} onChange={this.handleChange} />
                 </div>
 
