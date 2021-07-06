@@ -32,6 +32,7 @@ class AddForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}  className="userForm">
+          <h2>DEV-CLUBHOUSE</h2>
         <div>
           <label htmlFor="name">Name</label>
           <input className="formInput"
