@@ -25,12 +25,12 @@ class App extends Component {
             }
         ]
     }
+    }
 
     handleAddUser = (newUser) => {
         this.setState({
-            users: [...this.state.user, newUser]
+            users: [...this.state.users, newUser]
         })
-    }
     }
 
     render() {
