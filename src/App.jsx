@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import User from "./Component/User";
+import AddForm from "./Component/AddForm"
 
 class App extends Component {
     constructor(props) {
@@ -24,7 +25,14 @@ class App extends Component {
             }
         ]
     }
+
+    handleAddUser = (newUser) => {
+        this.setState({
+            users: [...this.state.user, newUser]
+        })
     }
+    }
+
     render() {
         
           const users = this.state.users.map((user, index) => {
@@ -35,6 +43,7 @@ class App extends Component {
         
         return (
             <div>
+                <AddForm addUser={this.handleAddUser} />
                 {users}
             </div>
             
