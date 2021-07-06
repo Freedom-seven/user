@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import User from "./Component/User";
 
 class App extends Component {
     constructor(props) {
@@ -28,12 +29,7 @@ class App extends Component {
         
           const users = this.state.users.map((user, index) => {
               return (
-                <div className="user" key={index}>
-                    <h1>Name: {user.name}</h1>
-                    <p>Email: {user.email}</p>
-                    <p>Gen: {user.gen}</p>
-                    <hr />
-                </div>
+               <User user={user} key={index} />
               )
           });
         
