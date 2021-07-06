@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './AddForm.css'
 
 class AddForm extends Component {
   constructor(props) {
@@ -30,28 +31,28 @@ class AddForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="userForm">
+      <form onSubmit={this.handleSubmit}  className="userForm">
+        <div>
           <label htmlFor="name">Name</label>
-          <input
+          <input className="formInput"
             type="name"
             name="name"
             value={this.state.name}
             onChange={this.handleChange}
           />
         </div>
-        <div className="userForm">
+        <div>
           <label htmlFor="email">Email</label>
-          <input
+          <input className="formInput"
             type="email"
             name="email"
             value={this.state.email}
             onChange={this.handleChange}
           />
         </div>
-        <div className="userForm">
+        <div>
           <label htmlFor="gen">Gen</label>
-          <input
+          <input className="formInput"
             type="number"
             name="gen"
             value={this.state.gen}
@@ -59,8 +60,8 @@ class AddForm extends Component {
           />
         </div>
 
-        <div className="submit">
-          <button>Register</button>
+        <div>
+          <button className="submit">Register</button>
         </div>
       </form>
     );
