@@ -11,19 +11,27 @@ class App extends Component {
     }
 
     handleAddUser = (newUser) => {
+        newUser.id = Math.random().toString();
         this.setState({
             users: [...this.state.users, newUser]
         })
+    };
+
+    handleDeleteUser = (userId) => {
+        
     }
 
-    render() {
-        
-         
-        
+    render() {  
         return (
-            <div style={{marginLeft: "5rem"}}>
-                <AddForm addUser={this.handleAddUser} />
-                <UserList users={this.state.users} />
+            <div className="container">
+                <div className="row">
+                    <div className="col-4">
+                    <AddForm addUser={this.handleAddUser} />
+                    </div>
+                    <div className="col-8">
+                    <UserList users={this.state.users} deleteUser={this.handleDeleteUser} />
+                    </div>
+                </div>
             </div>
             
         );
