@@ -1,10 +1,10 @@
 import React from 'react';
 import User from './User';
 
-const UserList = ({users}) => {
+const UserList = ({users, deleteUser}) => {
     const userList = users.map((user) => {
         return (
-         <User user={user} />
+         <User user={user} key={user.id} deleteUser={deleteUser} />
         )
     });
 
