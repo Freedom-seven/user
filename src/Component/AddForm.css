@@ -1,6 +1,7 @@
 body{
     background-color: black;
     color: aliceblue;
+    margin: 0rem;
   }
   
   .userForm {
@@ -8,9 +9,9 @@ body{
    background-color: aqua;
    color: black;
    border-radius: 10px;
-   height: 20rem;
-   width: 20rem;
-   margin: auto;
+   height: auto;
+   width: auto;
+   margin: 0rem;
    font-weight: bolder;
    box-shadow: rgba(236, 229, 229, 0.4) 0px 30px 90px;
   }
