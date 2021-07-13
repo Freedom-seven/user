@@ -22,7 +22,9 @@ const User = ({ user, deleteUser, editUser }) => {
             <ListGroup.Item>Name: {user.name}</ListGroup.Item>
             <ListGroup.Item>Email: {user.email}</ListGroup.Item>
             <ListGroup.Item>Gen: {user.gen}</ListGroup.Item>
-            <div className="card-btn">
+          </ListGroup>
+        </Card>
+        <div className="card-btn">
               <button className="btn btn-success edit" onClick={handleShow}>
                 Edit
               </button>
@@ -30,8 +32,6 @@ const User = ({ user, deleteUser, editUser }) => {
                 Delete
               </button>
             </div>
-          </ListGroup>
-        </Card>
 
         <Modal show={show} onHide={handleClose} animation={false}>
           <Modal.Header closeButton>
