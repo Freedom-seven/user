@@ -24,7 +24,13 @@ class App extends Component {
     this.setState({ users: savedUsers });
   };
 
-  handleEditUser = () => {};
+  handleEditUser = (updatedUser) => {
+    this.setState({
+      users: this.state.users.map((user) =>
+        user.id === updatedUser.id ? updatedUser : user
+      ),
+    });
+  };
 
   render() {
     return (
