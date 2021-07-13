@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AddForm from "./Component/AddForm";
 import UserList from "./Component/UserList";
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -34,13 +35,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container user">
         <div className="row">
           <div className="col-4">
             <AddForm addUser={this.handleAddUser} />
           </div>
           <div className="col-8">
-            <UserList
+            <UserList className="user-lists"
               users={this.state.users}
               deleteUser={this.handleDeleteUser}
               editUser={this.handleEditUser}
