@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import User from "./Component/User";
 import AddForm from "./Component/AddForm"
+import UserList from './Component/UserList';
 
 class App extends Component {
     constructor(props) {
@@ -18,16 +18,12 @@ class App extends Component {
 
     render() {
         
-          const users = this.state.users.map((user, index) => {
-              return (
-               <User user={user} key={index} />
-              )
-          });
+         
         
         return (
             <div style={{marginLeft: "5rem"}}>
                 <AddForm addUser={this.handleAddUser} />
-                {users}
+                <UserList users={this.state.users} />
             </div>
             
         );
