@@ -66,7 +66,7 @@ class EditAddUserForm extends Component {
         </div>
 
         <div>
-          <button className="submit">Save Change</button>
+          <button className="submit">Save Changes</button>
         </div>
       </form>
     );
