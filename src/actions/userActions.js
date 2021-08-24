@@ -5,3 +5,17 @@ export const addUser = (user) => {
         payload: user
     }
 }
+
+export const editUser = (updatedUser) => {
+    return {
+        type: "EDIT_USER",
+        payload: updatedUser
+    }
+}
+
+export const deleteUser = (user_id) => {
+    return {
+        type: "DELETE_USER",
+        payload: user_id
+    }
+}
