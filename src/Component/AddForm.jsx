@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
-import { addUser } from "../actions/userActions";
+import { addUser, getAllUsers } from "../actions/userActions";
 import './AddForm.css'
 
 class AddForm extends Component {
@@ -29,6 +29,10 @@ class AddForm extends Component {
       email: "",
       gen: "",
     });
+  };
+
+  componentDidMount (){
+    this.props.getAllUsers()
   };
 
   render() {
@@ -72,7 +76,8 @@ class AddForm extends Component {
 }
 
 const mapDispatchToProps = {
-  addNewUser: addUser
+  addNewUser: addUser,
+  getAllUsers: getAllUsers
 }
 
 export default connect(null, mapDispatchToProps) (AddForm);
