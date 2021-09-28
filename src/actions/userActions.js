@@ -15,11 +15,13 @@ export const addUser = (user) => {
 };
 
 export const editUser = (updatedUser) => {
- 
-  return {
-    type: "EDIT_USER",
-    payload: updatedUser,
-  };
+  return(dispatch, state, {getFirestore})=> {
+    getFirestore().collection("users").doc(updatedUser.id).set(updatedUser).then(()=>{});
+  }
+  // return {
+  //   type: "EDIT_USER",
+  //   payload: updatedUser,
+  // };
 };
 
 export const deleteUser = (user_id) => {
