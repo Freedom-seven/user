@@ -1,9 +1,31 @@
 
 .user {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .user-lists {
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
+.register-form, .login-form {
+  margin: auto;
+  max-width: 40rem;
+}
+
+.form {
+  padding: 8rem;
+}
+
+h4 {
+  text-align: center;
+}
+
+.google {
+  margin-top: 1rem;
+}
+
+.logout {
+  position: relative;
+  left: 80%;
+  margin: 5px;
+}
