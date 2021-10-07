@@ -3,7 +3,6 @@ import { Form, Button } from "react-bootstrap";
 import {connect, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import {
-  registerUserWithEmail,
   loginWithGoogle,
   loginWIthEmail,
 } from "../actions/authActions";
