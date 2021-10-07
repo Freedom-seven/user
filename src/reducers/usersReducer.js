@@ -2,7 +2,7 @@ const initialState = {
   users: [],
 };
 
-const usersRuducers = (state = initialState, action) => {
+const usersReducers = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_USER":
       return { ...state.users, users: [...state.users, action.payload] };
@@ -28,4 +28,4 @@ const usersRuducers = (state = initialState, action) => {
   }
 };
 
-export default usersRuducers;
+export default usersReducers;
