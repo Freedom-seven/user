@@ -5,12 +5,14 @@ import User from "./User";
 const UserList = ({ users, deleteUser, editUser }) => {
   const userList = users.map((user) => {
     return (
+      <>
       <User
         user={user}
         key={user.id}
         deleteUser={deleteUser}
         editUser={editUser}
       />
+      </>
     );
   });
 
@@ -19,8 +21,8 @@ const UserList = ({ users, deleteUser, editUser }) => {
 
 const mapStateToProps = (state) => {
   return {
-    users: state.users,
-  }
+    users: state.usersState.users,
+  };
 }
 
 export default connect(mapStateToProps) (UserList);
